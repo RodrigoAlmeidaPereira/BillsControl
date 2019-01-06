@@ -1,4 +1,4 @@
-package br.com.billscontrol.api;
+package br.com.billscontrol;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
