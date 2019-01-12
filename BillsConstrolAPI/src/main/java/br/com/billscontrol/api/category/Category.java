@@ -1,12 +1,15 @@
 package br.com.billscontrol.api.category;
 
 import java.time.Instant;
+import java.util.Collection;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
+import br.com.billscontrol.api.transaction.Transaction;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,6 +27,9 @@ public class Category {
 
 	private String name;
 	private String description;
+	
+	@OneToMany(mappedBy = "category")
+	private Collection<Transaction> transactions;
 	
 	@Column(name = "create_user")
 	private String createUser;

@@ -7,10 +7,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import br.com.billscontrol.api.account.Account;
 import lombok.AllArgsConstructor;
@@ -31,6 +30,7 @@ public class PaymentType {
 	private String name;
 	private String description;
 	
+	@JsonBackReference
 	@ManyToMany(mappedBy = "paymentTypes")
 	private Collection<Account> accounts;
 

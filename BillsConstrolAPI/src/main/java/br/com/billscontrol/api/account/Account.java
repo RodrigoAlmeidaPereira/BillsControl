@@ -11,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import br.com.billscontrol.api.paymenttype.PaymentType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -31,6 +33,7 @@ public class Account {
 	private String description;
 	
 	@ManyToMany
+	@JsonManagedReference
 	@JoinTable( name = "account_payment_type",
 		joinColumns = @JoinColumn(name = "account_id"),
 		inverseJoinColumns = @JoinColumn(name = "payment_type_id")

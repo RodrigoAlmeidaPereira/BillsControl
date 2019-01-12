@@ -48,20 +48,20 @@ public class ConfigDML implements ApplicationRunner {
 		
 		Page<PaymentType> paymentsType = paymentTypeService.findAll(PageRequest.of(0, 1000));
 		
-		accountService.save(createAccount("Conta Itaú", "Conta Corrente Itaú", paymentsType.getContent()));
+		accountService.save(createAccount("Conta ItaÃº", "Conta Corrente ItaÃº", paymentsType.getContent()));
 		accountService.save(createAccount("Conta Santander", "Conta Corrente Santander", paymentsType.getContent()));
 	}
 
 	private void insertPaymentTypes() {
-		paymentTypeService.save(createPaymentType("Cartão de Crédito", "Transação com cartão de crédito."));
-		paymentTypeService.save(createPaymentType("Cartão de Débito", "Transação com cartão de débito."));
-		paymentTypeService.save(createPaymentType("Dinheiro", "Transação com dinheiro."));
+		paymentTypeService.save(createPaymentType("CartÃ£o de CrÃ©dito", "TransaÃ§Ã£o com cartÃ£o de crÃ©dito."));
+		paymentTypeService.save(createPaymentType("CartÃ£o de DÃ©bito", "TransaÃ§Ã£o com cartÃ£o de dÃ©bito."));
+		paymentTypeService.save(createPaymentType("Dinheiro", "TransaÃ§Ã£o com dinheiro."));
 	}
 
 	private void insertCategories() {
 		categoryService.save(createCategory("Compras", "Gastos com supermercado"));
 		categoryService.save(createCategory("Carro", "Gastos com carro"));
-		categoryService.save(createCategory("Vestuáro", "Gastos com roupas"));
+		categoryService.save(createCategory("VestuÃ¡ro", "Gastos com roupas"));
 	}
 	
 	private Category createCategory(String name, String description) {

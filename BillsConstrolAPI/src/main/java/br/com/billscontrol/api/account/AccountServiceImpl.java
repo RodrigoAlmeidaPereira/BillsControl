@@ -24,7 +24,7 @@ public class AccountServiceImpl implements AccountService {
 	public Account update(Account account) {
 		
 		if (!repository.existsById(account.getId())) {
-			throw new ResourceNotFoundException();
+			throw ResourceNotFoundException.builder().resourceId(account.getId()).build();
 		} 
 
 		return this.save(account);
