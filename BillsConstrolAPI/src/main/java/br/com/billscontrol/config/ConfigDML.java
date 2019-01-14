@@ -1,7 +1,12 @@
 package br.com.billscontrol.config;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.Set;
 
+import br.com.billscontrol.api.user.User;
+import br.com.billscontrol.api.user.UserService;
+import br.com.billscontrol.api.user.UserType;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Configuration;
@@ -9,7 +14,6 @@ import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 
 import br.com.billscontrol.api.account.Account;
 import br.com.billscontrol.api.account.AccountService;
@@ -18,16 +22,20 @@ import br.com.billscontrol.api.category.CategoryService;
 import br.com.billscontrol.api.paymenttype.PaymentType;
 import br.com.billscontrol.api.paymenttype.PaymentTypeService;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Pageable;
+import org.springframework.transaction.annotation.Transactional;
 
 @Configuration
 @AllArgsConstructor
 @Order(Ordered.HIGHEST_PRECEDENCE)
+@Transactional
 public class ConfigDML implements ApplicationRunner {
 
 	private final CategoryService categoryService;
 	private final AccountService accountService;
 	private final PaymentTypeService paymentTypeService;
-	
+	private final UserService userService;
+
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		
@@ -42,6 +50,13 @@ public class ConfigDML implements ApplicationRunner {
 		if (accountService.isEmpty()) {
 			insertAccounts();
 		}
+
+		if (userService.isEmpty()) {
+			inserUsers();
+		}
+
+		userService.findAll(PageRequest.of(0, 20)).forEach(System.out::println);
+
 	}
 
 	private void insertAccounts() {
@@ -62,6 +77,11 @@ public class ConfigDML implements ApplicationRunner {
 		categoryService.save(createCategory("Compras", "Gastos com supermercado"));
 		categoryService.save(createCategory("Carro", "Gastos com carro"));
 		categoryService.save(createCategory("Vestuáro", "Gastos com roupas"));
+	}
+
+	private void inserUsers() {
+		userService.save(createUser("Rodrigo", "rodrigoalmeida.as@gmail.com", UserType.ADMIN, Set.of("995543599")));
+		userService.save(createUser("Lizandra", "lizandra.azuos@gmail.com", UserType.ADMIN, Set.of("980949999", "1234567")));
 	}
 	
 	private Category createCategory(String name, String description) {
@@ -93,4 +113,15 @@ public class ConfigDML implements ApplicationRunner {
 				.build();
 	}
 
+
+	private User createUser(String name, String email, UserType userType, Set<String> phones) {
+		return User.builder()
+				.name(name)
+				.email(email)
+				.userType(userType)
+				.phones(phones)
+				.createUser("System")
+				.createInstant(java.time.Instant.now())
+				.build();
+	}
 }

@@ -3,11 +3,7 @@ package br.com.billscontrol.api.paymenttype;
 import java.time.Instant;
 import java.util.Collection;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
@@ -36,13 +32,14 @@ public class PaymentType {
 
 	@Column(name = "create_user")
 	private String createUser;
-	
+
 	@Column(name = "create_instant")
 	private Instant createInstant;
 
 	@Column(name = "last_update_user")
 	private String lastUpdateUser;
-	
+
 	@Column(name = "last_update_instant")
 	private Instant lastUpdateInstant;
+
 }

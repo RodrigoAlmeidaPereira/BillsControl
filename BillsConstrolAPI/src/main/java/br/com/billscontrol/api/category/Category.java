@@ -3,17 +3,14 @@ package br.com.billscontrol.api.category;
 import java.time.Instant;
 import java.util.Collection;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 
 import br.com.billscontrol.api.transaction.Transaction;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 @Entity(name = "category")
 @AllArgsConstructor
@@ -30,17 +27,17 @@ public class Category {
 	
 	@OneToMany(mappedBy = "category")
 	private Collection<Transaction> transactions;
-	
+
 	@Column(name = "create_user")
 	private String createUser;
-	
+
 	@Column(name = "create_instant")
 	private Instant createInstant;
 
 	@Column(name = "last_update_user")
 	private String lastUpdateUser;
-	
+
 	@Column(name = "last_update_instant")
 	private Instant lastUpdateInstant;
-	
+
 }

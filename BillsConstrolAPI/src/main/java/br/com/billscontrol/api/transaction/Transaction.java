@@ -2,16 +2,13 @@ package br.com.billscontrol.api.transaction;
 
 import java.math.BigDecimal;
 import java.time.Instant;
+import java.util.Collection;
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 import br.com.billscontrol.api.category.Category;
+import br.com.billscontrol.api.installment.Installment;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -33,16 +30,21 @@ public class Transaction {
 	@ManyToOne
 	@JoinColumn(name = "category_id")
 	private Category category;
-	
+
+	@OneToMany(mappedBy = "transaction")
+	private Collection<Installment> installments;
+
 	@Column(name = "create_user")
 	private String createUser;
-	
+
 	@Column(name = "create_instant")
 	private Instant createInstant;
 
 	@Column(name = "last_update_user")
 	private String lastUpdateUser;
-	
+
 	@Column(name = "last_update_instant")
 	private Instant lastUpdateInstant;
+
+
 }
