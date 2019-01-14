@@ -1,14 +1,15 @@
 package br.com.billscontrol.api.user;
 
+import br.com.billscontrol.api.financialcontrol.FinancialControl;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.repository.cdi.Eager;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import java.time.Instant;
+import java.util.Collection;
 import java.util.Set;
 
 @Entity(name = "user")
@@ -30,6 +31,13 @@ public class User {
     @ElementCollection
     @CollectionTable(name = "phone")
     private Set<String> phones;
+
+    @OneToMany(mappedBy = "owner")
+    private Collection<FinancialControl> myFinancialControls;
+
+    @ManyToMany(mappedBy = "allowedUsers")
+    @JsonBackReference
+    private Collection<FinancialControl> guestFinancialControls;
 
     @Column(name = "create_user")
     private String createUser;
