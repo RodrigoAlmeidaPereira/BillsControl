@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.time.Instant;
 import java.util.Collection;
 import java.util.Set;
@@ -22,9 +23,13 @@ public class User {
     @Id @GeneratedValue
     private Long id;
 
+    @NotNull
     private String name;
+
+    @NotNull
     private String email;
 
+    @NotNull
     @Column(name = "user_type")
     private UserType userType;
 
@@ -39,9 +44,11 @@ public class User {
     @JsonBackReference
     private Collection<FinancialControl> guestFinancialControls;
 
+    @NotNull
     @Column(name = "create_user")
     private String createUser;
 
+    @NotNull
     @Column(name = "create_instant")
     private Instant createInstant;
 
@@ -50,6 +57,5 @@ public class User {
 
     @Column(name = "last_update_instant")
     private Instant lastUpdateInstant;
-
 
 }

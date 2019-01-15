@@ -1,22 +1,24 @@
 package br.com.billscontrol.api.account;
 
-import java.util.Optional;
-
+import br.com.billscontrol.api.paymentsource.PaymentSourceService;
+import br.com.billscontrol.exception.ResourceNotFoundException;
+import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import br.com.billscontrol.exception.ResourceNotFoundException;
-import lombok.AllArgsConstructor;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
 public class AccountServiceImpl implements AccountService {
 
 	private AccountRepository repository;
-	
+	private PaymentSourceService paymentSourceService;
+
 	@Override
 	public Account save(Account account) {
+
 		return this.repository.save(account);
 	}
 	

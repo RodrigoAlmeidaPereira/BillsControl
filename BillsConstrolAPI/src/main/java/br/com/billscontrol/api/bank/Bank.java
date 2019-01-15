@@ -1,4 +1,4 @@
-package br.com.billscontrol.api.paymenttype;
+package br.com.billscontrol.api.bank;
 
 import br.com.billscontrol.api.financialcontrol.FinancialControl;
 import lombok.AllArgsConstructor;
@@ -10,12 +10,12 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.Instant;
 
-@Entity(name = "payment_type")
+@Entity(name = "bank")
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
 @Data
-public class PaymentType {
+public class Bank {
 	
 	@Id @GeneratedValue
 	private Long id;
@@ -40,8 +40,7 @@ public class PaymentType {
 
 	@Column(name = "last_update_user")
 	private String lastUpdateUser;
-
+	
 	@Column(name = "last_update_instant")
 	private Instant lastUpdateInstant;
-
 }

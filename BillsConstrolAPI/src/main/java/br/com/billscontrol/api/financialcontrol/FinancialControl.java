@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.time.Instant;
 import java.util.Collection;
 
@@ -20,9 +21,12 @@ public class FinancialControl {
     @Id @GeneratedValue
     private Long id;
 
+    @NotNull
     private String name;
+
     private String description;
 
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private User owner;
@@ -33,9 +37,11 @@ public class FinancialControl {
         inverseJoinColumns = @JoinColumn(name = "user_id"))
     private Collection<User> allowedUsers;
 
+    @NotNull
     @Column(name = "create_user")
     private String createUser;
 
+    @NotNull
     @Column(name = "create_instant")
     private Instant createInstant;
 

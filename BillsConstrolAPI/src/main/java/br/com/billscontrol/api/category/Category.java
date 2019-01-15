@@ -1,16 +1,16 @@
 package br.com.billscontrol.api.category;
 
-import java.time.Instant;
-import java.util.Collection;
-
-import javax.persistence.*;
-
+import br.com.billscontrol.api.financialcontrol.FinancialControl;
 import br.com.billscontrol.api.transaction.Transaction;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.time.Instant;
+import java.util.Collection;
 
 @Entity(name = "category")
 @AllArgsConstructor
@@ -22,15 +22,24 @@ public class Category {
 	@Id @GeneratedValue
 	private Long id;
 
+	@NotNull
 	private String name;
+
 	private String description;
+
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "financial_control_id")
+	private FinancialControl financialControl;
 	
 	@OneToMany(mappedBy = "category")
 	private Collection<Transaction> transactions;
 
+	@NotNull
 	@Column(name = "create_user")
 	private String createUser;
 
+	@NotNull
 	@Column(name = "create_instant")
 	private Instant createInstant;
 

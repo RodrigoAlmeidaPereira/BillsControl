@@ -1,23 +1,17 @@
 package br.com.billscontrol.api.account;
 
-import java.time.Instant;
-import java.util.Collection;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-
-import br.com.billscontrol.api.paymenttype.PaymentType;
+import br.com.billscontrol.api.bank.Bank;
+import br.com.billscontrol.api.financialcontrol.FinancialControl;
+import br.com.billscontrol.api.paymentsource.PaymentSource;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.time.Instant;
+import java.util.Collection;
 
 @Entity(name = "account")
 @AllArgsConstructor
@@ -28,21 +22,30 @@ public class Account {
 	
 	@Id @GeneratedValue
 	private Long id;
-	
-	private String name;
-	private String description;
-	
-	@ManyToMany
-	@JsonManagedReference
-	@JoinTable( name = "account_payment_type",
-		joinColumns = @JoinColumn(name = "account_id"),
-		inverseJoinColumns = @JoinColumn(name = "payment_type_id")
-	)
-	private Collection<PaymentType> paymentTypes;
 
+	@NotNull
+	private String name;
+
+	private String description;
+
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "bank_id")
+	private Bank bank;
+
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "financial_control_id")
+	private FinancialControl financialControl;
+	
+	@OneToMany(mappedBy = "account")
+	private Collection<PaymentSource> paymentSources;
+
+	@NotNull
 	@Column(name = "create_user")
 	private String createUser;
-	
+
+	@NotNull
 	@Column(name = "create_instant")
 	private Instant createInstant;
 
