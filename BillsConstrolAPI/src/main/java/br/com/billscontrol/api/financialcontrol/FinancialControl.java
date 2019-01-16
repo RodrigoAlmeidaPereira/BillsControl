@@ -1,6 +1,7 @@
 package br.com.billscontrol.api.financialcontrol;
 
 import br.com.billscontrol.api.user.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,11 +27,13 @@ public class FinancialControl {
 
     private String description;
 
+    @JsonIgnore
     @NotNull
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private User owner;
 
+    @JsonIgnore
     @ManyToMany
     @JoinTable(name = "financial_control_user",
         joinColumns = @JoinColumn(name = "financial_control_id"),

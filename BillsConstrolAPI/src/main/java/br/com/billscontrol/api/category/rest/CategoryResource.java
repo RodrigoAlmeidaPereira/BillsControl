@@ -1,5 +1,8 @@
 package br.com.billscontrol.api.category.rest;
 
+import br.com.billscontrol.api.category.Category;
+import br.com.billscontrol.api.category.CategoryService;
+import lombok.AllArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.PagedResources;
@@ -8,24 +11,13 @@ import org.springframework.hateoas.Resources;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
-import br.com.billscontrol.api.category.Category;
-import br.com.billscontrol.api.category.CategoryService;
-import lombok.AllArgsConstructor;
-
 @RestController
-@RequestMapping("/categories")
+@RequestMapping("/categories/{userId}/{financialControlId}")
 @AllArgsConstructor
 public class CategoryResource {
 	
@@ -34,23 +26,33 @@ public class CategoryResource {
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.OK)
 	Resources<Resource<Category>> getAll(
+			@PathVariable Long userId,
+			@PathVariable Long financialControlId,
 			PagedResourcesAssembler<Category> assembler,
 			@RequestParam(defaultValue = "0", required = false) Integer page,
             @RequestParam(defaultValue = "20", required = false) Integer size) {
 		
 		PagedResources<Resource<Category>> resource = assembler
-				.toResource(categoryService.findAll(PageRequest.of(page, size)), this::toResource);
+				.toResource(categoryService.findAll(PageRequest.of(page, size), financialControlId),
+						category -> this.toResource(userId, financialControlId, category));
 		
 		resource.add(linkTo(methodOn(CategoryResource.class)
-				.getAll(assembler, page, size)).withRel("categories"));
+				.getAll(userId, financialControlId, assembler, page, size)).withRel("categories"));
 		
 		return resource;
 	}
 	
 	@GetMapping("/{id}")
-	ResponseEntity<Resource<Category>> getOne(@PathVariable Long id) {
+	ResponseEntity<Resource<Category>> getOne(
+			@PathVariable Long userId,
+			@PathVariable Long financialControlId,
+			@PathVariable Long id) {
+
+		System.out.println(userId);
+		System.out.println(financialControlId);
+
 		return categoryService.findById(id)
-			.map(this::toResource)
+			.map(category -> this.toResource(userId, financialControlId, category))
 			.map(ResponseEntity::ok)
 			.orElse(null);
 	}
@@ -61,13 +63,13 @@ public class CategoryResource {
 	ResponseEntity<Resource<Category>> create() {
 		Category category = Category.builder().id(1l).name("TEste").description("TESTE").build();
 
-		return ResponseEntity.ok(toResource(categoryService.save(category)));
+		return ResponseEntity.ok(toResource(1l, 1l,categoryService.save(category)));
 		
 	}
 	
-	private Resource<Category> toResource(Category category) {
+	private Resource<Category> toResource(Long userId, Long financialControlId, Category category) {
 		return new Resource<>(category, linkTo(
-				methodOn(CategoryResource.class).getOne(category.getId())).withSelfRel());
+				methodOn(CategoryResource.class).getOne(userId, financialControlId, category.getId())).withSelfRel());
 	}
 	
 }

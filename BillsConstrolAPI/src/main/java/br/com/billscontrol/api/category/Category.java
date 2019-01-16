@@ -2,6 +2,7 @@ package br.com.billscontrol.api.category;
 
 import br.com.billscontrol.api.financialcontrol.FinancialControl;
 import br.com.billscontrol.api.transaction.Transaction;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -31,7 +32,8 @@ public class Category {
 	@ManyToOne
 	@JoinColumn(name = "financial_control_id")
 	private FinancialControl financialControl;
-	
+
+	@JsonIgnore
 	@OneToMany(mappedBy = "category")
 	private Collection<Transaction> transactions;
 

@@ -1,13 +1,12 @@
 package br.com.billscontrol.api.category;
 
-import java.util.Optional;
-
+import br.com.billscontrol.exception.ResourceNotFoundException;
+import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import br.com.billscontrol.exception.ResourceNotFoundException;
-import lombok.AllArgsConstructor;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -45,4 +44,8 @@ public class CategoryServiceImpl implements CategoryService {
 		return repository.count() <= 0;
 	}
 
+	@Override
+	public Page<Category> findAll(Pageable pageable, Long financialControlId) {
+		return this.repository.findAllByFinancialControlId(pageable, financialControlId);
+	}
 }
