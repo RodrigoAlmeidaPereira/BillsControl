@@ -44,4 +44,8 @@ public class BankServiceImpl implements BankService {
 		return repository.count() <= 0;
 	}
 
+	@Override
+	public Page<Bank> findAll(Pageable pageable, Long financialControlId) {
+		return repository.findAllByFinancialControlId(pageable,financialControlId);
+	}
 }

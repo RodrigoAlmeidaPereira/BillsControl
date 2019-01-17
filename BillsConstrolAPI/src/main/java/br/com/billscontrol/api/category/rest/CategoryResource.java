@@ -26,9 +26,9 @@ public class CategoryResource {
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.OK)
 	Resources<Resource<Category>> getAll(
+			PagedResourcesAssembler<Category> assembler,
 			@PathVariable Long userId,
 			@PathVariable Long financialControlId,
-			PagedResourcesAssembler<Category> assembler,
 			@RequestParam(defaultValue = "0", required = false) Integer page,
             @RequestParam(defaultValue = "20", required = false) Integer size) {
 		
@@ -37,7 +37,7 @@ public class CategoryResource {
 						category -> this.toResource(userId, financialControlId, category));
 		
 		resource.add(linkTo(methodOn(CategoryResource.class)
-				.getAll(userId, financialControlId, assembler, page, size)).withRel("categories"));
+				.getAll(assembler, userId, financialControlId, page, size)).withRel("categories"));
 		
 		return resource;
 	}
@@ -47,9 +47,6 @@ public class CategoryResource {
 			@PathVariable Long userId,
 			@PathVariable Long financialControlId,
 			@PathVariable Long id) {
-
-		System.out.println(userId);
-		System.out.println(financialControlId);
 
 		return categoryService.findById(id)
 			.map(category -> this.toResource(userId, financialControlId, category))

@@ -11,6 +11,7 @@ public interface PaymentSourceService {
 	Optional<PaymentSource> findById(Long id);
 	PaymentSource update(PaymentSource category);
     Page<PaymentSource> findAll(Pageable pageable);
+	Page<PaymentSource> findAll(Pageable pageable, Long financialControlId);
 	boolean isEmpty();
 			
 }

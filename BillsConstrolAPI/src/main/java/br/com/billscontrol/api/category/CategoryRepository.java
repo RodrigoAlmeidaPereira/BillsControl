@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Long> {
 
-
     Page<Category> findAllByFinancialControlId(Pageable pageable, Long financialControlId);
+
 }

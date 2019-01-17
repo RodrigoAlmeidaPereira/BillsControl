@@ -47,4 +47,8 @@ public class AccountServiceImpl implements AccountService {
 		return repository.count() <= 0;
 	}
 
+	@Override
+	public Page<Account> findAll(Pageable pageable, Long financialControlId) {
+		return repository.findAllByFinancialControlId(pageable, financialControlId);
+	}
 }

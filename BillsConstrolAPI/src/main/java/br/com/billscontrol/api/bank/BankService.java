@@ -11,6 +11,7 @@ public interface BankService {
 	Optional<Bank> findById(Long id);
 	Bank update(Bank category);
     Page<Bank> findAll(Pageable pageable);
+	Page<Bank> findAll(Pageable pageable, Long financialControlId);
 	boolean isEmpty();
 			
 }

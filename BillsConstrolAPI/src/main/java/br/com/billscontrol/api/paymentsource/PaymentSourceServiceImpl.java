@@ -44,4 +44,8 @@ public class PaymentSourceServiceImpl implements PaymentSourceService {
 		return repository.count() <= 0;
 	}
 
+	@Override
+	public Page<PaymentSource> findAll(Pageable pageable, Long financialControlId) {
+		return repository.findAllByFinancialControlId(pageable, financialControlId);
+	}
 }

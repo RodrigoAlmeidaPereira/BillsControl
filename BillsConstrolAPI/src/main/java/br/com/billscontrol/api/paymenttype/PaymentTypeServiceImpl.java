@@ -1,13 +1,12 @@
 package br.com.billscontrol.api.paymenttype;
 
-import java.util.Optional;
-
+import br.com.billscontrol.exception.ResourceNotFoundException;
+import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import br.com.billscontrol.exception.ResourceNotFoundException;
-import lombok.AllArgsConstructor;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -45,4 +44,8 @@ public class PaymentTypeServiceImpl implements PaymentTypeService {
 		return repository.count() <= 0;
 	}
 
+	@Override
+	public Page<PaymentType> findAll(Pageable pageable, Long financialControlId) {
+		return this.repository.findAllByFinancialControlId(pageable, financialControlId);
+	}
 }

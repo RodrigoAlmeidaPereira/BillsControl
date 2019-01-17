@@ -1,13 +1,12 @@
 package br.com.billscontrol.api.transaction;
 
-import java.util.Optional;
-
+import br.com.billscontrol.exception.ResourceNotFoundException;
+import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import br.com.billscontrol.exception.ResourceNotFoundException;
-import lombok.AllArgsConstructor;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -45,4 +44,8 @@ public class TransactionServiceImpl implements TransactionService {
 		return repository.count() <= 0;
 	}
 
+	@Override
+	public Page<Transaction> findAll(Pageable pageable, Long financialControlId, TransactionStatus transactionStatus) {
+		return repository.findAllByFinancialControlIdAndTransactionStatus(financialControlId, transactionStatus);
+	}
 }
