@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.time.Instant;
 import java.util.Collection;
 
@@ -23,7 +24,8 @@ public class Category {
 	@Id @GeneratedValue
 	private Long id;
 
-	@NotNull
+	@NotNull(message = "Name cannot be null")
+	@Size(min = 1, max = 90, message = "Name must have 1 to 90 characters")
 	private String name;
 
 	private String description;

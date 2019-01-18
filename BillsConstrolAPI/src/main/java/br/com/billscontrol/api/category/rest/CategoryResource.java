@@ -16,6 +16,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.time.Instant;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
@@ -71,7 +72,7 @@ public class CategoryResource {
 	ResponseEntity<Resource<Category>> create(
 			@PathVariable Long userId,
 			@PathVariable Long financialControlId,
-			@RequestBody Category category) {
+			@Valid @RequestBody Category category) {
 
 		Category entity = category.toBuilder()
 				.financialControl(financialControlService.findById(financialControlId).orElse(null))
