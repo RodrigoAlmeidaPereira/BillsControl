@@ -6,6 +6,7 @@ import br.com.billscontrol.api.financialcontrol.FinancialControlService;
 import br.com.billscontrol.exception.ResourceNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.PagedResources;
 import org.springframework.hateoas.Resource;
@@ -35,14 +36,19 @@ public class CategoryResource {
 			@PathVariable Long userId,
 			@PathVariable Long financialControlId,
 			@RequestParam(defaultValue = "0", required = false) Integer page,
-            @RequestParam(defaultValue = "20", required = false) Integer size) {
-		
+            @RequestParam(defaultValue = "20", required = false) Integer size,
+			@RequestParam(defaultValue = "name", required = false) String order,
+			@RequestParam(defaultValue = "ASC", required = false) String direction) {
+
+		PageRequest pageRequest = PageRequest.of(page, size, Sort.Direction.valueOf(direction), order);
+
 		PagedResources<Resource<Category>> resource = assembler
-				.toResource(categoryService.findAll(PageRequest.of(page, size), financialControlId),
+				.toResource(categoryService.findAll(pageRequest, financialControlId),
 						category -> this.toResource(userId, financialControlId, category));
 		
 		resource.add(linkTo(methodOn(CategoryResource.class)
-				.getAll(assembler, userId, financialControlId, page, size)).withRel("categories"));
+				.getAll(assembler, userId, financialControlId, page, size, order, direction))
+				.withRel("categories"));
 		
 		return resource;
 	}
