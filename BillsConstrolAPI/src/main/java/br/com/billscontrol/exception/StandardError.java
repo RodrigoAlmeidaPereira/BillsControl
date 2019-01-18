@@ -1,10 +1,10 @@
 package br.com.billscontrol.exception;
 
-import java.time.Instant;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+
+import java.time.Instant;
 
 @Data
 @AllArgsConstructor
@@ -12,6 +12,7 @@ import lombok.Data;
 public class StandardError {
 	
 	private Integer errorCode;
+	private String status;
 	private String message;
 	private Instant instant;
 

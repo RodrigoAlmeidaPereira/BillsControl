@@ -1,7 +1,9 @@
 package br.com.billscontrol.api.category;
 
+import br.com.billscontrol.exception.ResourceInUseException;
 import br.com.billscontrol.exception.ResourceNotFoundException;
 import lombok.AllArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -47,5 +49,16 @@ public class CategoryServiceImpl implements CategoryService {
 	@Override
 	public Page<Category> findAll(Pageable pageable, Long financialControlId) {
 		return this.repository.findAllByFinancialControlId(pageable, financialControlId);
+	}
+
+	@Override
+	public void delete(Category category) {
+		try {
+			repository.delete(category);
+		} catch (DataIntegrityViolationException ex) {
+			throw ResourceInUseException.builder()
+					.resourceId(category.getId()).clazz(Category.class)
+					.build();
+		}
 	}
 }

@@ -10,6 +10,7 @@ public interface CategoryService {
 	Category save(Category category);
 	Optional<Category> findById(Long id);
 	Category update(Category category);
+	void delete(Category category);
     Page<Category> findAll(Pageable pageable);
 	Page<Category> findAll(Pageable pageable, Long financialControlId);
 	boolean isEmpty();

@@ -46,6 +46,6 @@ public class TransactionServiceImpl implements TransactionService {
 
 	@Override
 	public Page<Transaction> findAll(Pageable pageable, Long financialControlId, TransactionStatus transactionStatus) {
-		return repository.findAllByFinancialControlIdAndTransactionStatus(financialControlId, transactionStatus);
+		return repository.findAllByFinancialControlIdAndTransactionStatus(pageable, financialControlId, transactionStatus);
 	}
 }
