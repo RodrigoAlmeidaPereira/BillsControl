@@ -1,4 +1,4 @@
-package br.com.billscontrol.api;
+package br.com.billscontrol;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

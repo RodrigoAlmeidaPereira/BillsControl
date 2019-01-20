@@ -110,7 +110,7 @@ public class CategoryResource {
 
 	@DeleteMapping(path = "/{id}")
 	@ResponseStatus(HttpStatus.OK)
-	ResponseEntity<Resource<Category>> delete(
+	ResponseEntity<Resource<CategoryVO>> delete(
 			@PathVariable Long id) {
 
 		Category entity = service.findById(id)

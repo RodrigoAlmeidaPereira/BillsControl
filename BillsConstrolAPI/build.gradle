@@ -29,9 +29,9 @@ repositories {
 }
 
 dependencies {
-	implementation('org.springframework.boot:spring-boot-starter-web')
-	implementation('org.springframework.boot:spring-boot-starter-data-jpa')
-	implementation('org.springframework.boot:spring-boot-starter-hateoas')
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-hateoas'
 
 	runtimeOnly 'com.h2database:h2'
 
@@ -41,11 +41,13 @@ dependencies {
 	runtimeOnly 'com.sun.istack:istack-commons-runtime:3.0.5'
 
 
-	compile('io.springfox:springfox-swagger2:2.8.0')
-	compile('io.springfox:springfox-swagger-ui:2.8.0')
+	compile 'io.springfox:springfox-swagger2:2.8.0'
+	compile 'io.springfox:springfox-swagger-ui:2.8.0'
 
 	compileOnly 'org.projectlombok:lombok:1.18.4'
 	apt 'org.projectlombok:lombok:1.18.4'
 
-	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'br.com.six2six:fixture-factory:3.1.0'
+
 }

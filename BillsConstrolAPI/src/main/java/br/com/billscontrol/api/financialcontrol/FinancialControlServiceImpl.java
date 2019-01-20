@@ -31,6 +31,11 @@ public class FinancialControlServiceImpl implements FinancialControlService {
 	
 	@Override
 	public Optional<FinancialControl> findById(Long id) {
+
+		if (id == null) {
+			return Optional.empty();
+		}
+
 		return repository.findById(id);
 	}
 	
