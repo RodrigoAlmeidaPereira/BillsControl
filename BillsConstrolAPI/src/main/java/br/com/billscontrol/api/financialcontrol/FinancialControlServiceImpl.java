@@ -44,4 +44,36 @@ public class FinancialControlServiceImpl implements FinancialControlService {
 		return repository.count() <= 0;
 	}
 
+	@Override
+	public FinancialControl toEntity(FinancialControlVO vo) {
+
+		if (vo == null) {
+			return null;
+		}
+
+		FinancialControl entity = findById(vo.getId()).orElse(null);
+
+		if (entity != null) {
+			entity = entity.toBuilder()
+					.name(vo.getName())
+					.description(vo.getDescription())
+					.build();
+		}
+
+		return entity;
+	}
+
+	@Override
+	public FinancialControlVO toVO(FinancialControl entity) {
+
+		if (entity == null) {
+			return null;
+		}
+
+		return FinancialControlVO.builder()
+				.id(entity.getId())
+				.name(entity.getName())
+				.description(entity.getDescription())
+				.build();
+	}
 }

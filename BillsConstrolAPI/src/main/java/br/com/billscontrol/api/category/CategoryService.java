@@ -14,5 +14,7 @@ public interface CategoryService {
     Page<Category> findAll(Pageable pageable);
 	Page<Category> findAll(Pageable pageable, Long financialControlId);
 	boolean isEmpty();
+	Category toEntity(CategoryVO vo);
+	CategoryVO toVO(Category entity);
 			
 }

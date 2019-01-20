@@ -1,5 +1,6 @@
 package br.com.billscontrol.api.category;
 
+import br.com.billscontrol.api.financialcontrol.FinancialControlService;
 import br.com.billscontrol.exception.ResourceInUseException;
 import br.com.billscontrol.exception.ResourceNotFoundException;
 import lombok.AllArgsConstructor;
@@ -15,6 +16,7 @@ import java.util.Optional;
 public class CategoryServiceImpl implements CategoryService {
 
 	private CategoryRepository repository;
+	private FinancialControlService  financialService;
 	
 	@Override
 	public Category save(Category category) {
@@ -33,6 +35,10 @@ public class CategoryServiceImpl implements CategoryService {
 	
 	@Override
 	public Optional<Category> findById(Long id) {
+		if (id == null) {
+			return Optional.empty();
+		}
+
 		return repository.findById(id);
 	}
 	
@@ -60,5 +66,38 @@ public class CategoryServiceImpl implements CategoryService {
 					.resourceId(category.getId()).clazz(Category.class)
 					.build();
 		}
+	}
+
+	@Override
+	public Category toEntity(CategoryVO vo) {
+
+		if (vo == null) {
+			return null;
+		}
+
+		Category entity = this.findById(vo.getId())
+				.orElse(Category.builder().build());
+
+		entity = entity.toBuilder()
+				.name(vo.getName())
+				.description(vo.getDescription())
+				.build();
+
+		return entity;
+	}
+
+	@Override
+	public CategoryVO toVO(Category entity) {
+
+		if (entity == null) {
+			return null;
+		}
+
+		return CategoryVO.builder()
+				.id(entity.getId())
+				.description(entity.getDescription())
+				.name(entity.getName())
+				.financialControlVO(financialService.toVO(entity.getFinancialControl()))
+				.build();
 	}
 }

@@ -53,4 +53,6 @@ public class FinancialControl {
 
     @Column(name = "last_update_instant")
     private Instant lastUpdateInstant;
+
+
 }

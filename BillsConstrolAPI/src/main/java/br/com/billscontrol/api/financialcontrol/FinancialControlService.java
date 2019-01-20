@@ -12,5 +12,8 @@ public interface FinancialControlService {
 	FinancialControl update(FinancialControl entity);
     Page<FinancialControl> findAll(Pageable pageable);
 	boolean isEmpty();
+
+	FinancialControl toEntity(FinancialControlVO vo);
+	FinancialControlVO toVO(FinancialControl entity);
 			
 }
