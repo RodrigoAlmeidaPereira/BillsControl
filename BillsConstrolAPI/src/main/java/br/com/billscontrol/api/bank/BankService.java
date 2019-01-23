@@ -7,11 +7,15 @@ import java.util.Optional;
 
 public interface BankService {
 
-	Bank save(Bank category);
+	Bank save(Bank entity);
 	Optional<Bank> findById(Long id);
 	Bank update(Bank category);
     Page<Bank> findAll(Pageable pageable);
 	Page<Bank> findAll(Pageable pageable, Long financialControlId);
+	void delete(Long id);
 	boolean isEmpty();
+
+	Bank toEntity(BankVO vo);
+	BankVO toVO(Bank entity);
 			
 }

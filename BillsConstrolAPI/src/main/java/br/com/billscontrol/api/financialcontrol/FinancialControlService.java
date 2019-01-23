@@ -11,6 +11,8 @@ public interface FinancialControlService {
 	Optional<FinancialControl> findById(Long id);
 	FinancialControl update(FinancialControl entity);
     Page<FinancialControl> findAll(Pageable pageable);
+	Page<FinancialControl> findAll(Pageable pageable, Long userId);
+	void delete(Long id);
 	boolean isEmpty();
 
 	FinancialControl toEntity(FinancialControlVO vo);

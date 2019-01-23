@@ -75,15 +75,11 @@ public class CategoryServiceImpl implements CategoryService {
 			return null;
 		}
 
-		Category entity = this.findById(vo.getId())
-				.orElse(Category.builder().build());
-
-		entity = entity.toBuilder()
-				.name(vo.getName())
-				.description(vo.getDescription())
-				.build();
-
-		return entity;
+		return findById(vo.getId())
+				.orElse(Category.builder()
+					.name(vo.getName())
+					.description(vo.getDescription())
+					.build());
 	}
 
 	@Override

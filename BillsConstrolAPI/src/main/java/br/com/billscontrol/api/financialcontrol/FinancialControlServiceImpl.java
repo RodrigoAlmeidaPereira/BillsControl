@@ -43,10 +43,26 @@ public class FinancialControlServiceImpl implements FinancialControlService {
 	public Page<FinancialControl> findAll(Pageable pageable) {
 		return repository.findAll(pageable);
 	}
-	
+
+	@Override
+	public Page<FinancialControl> findAll(Pageable pageable, Long userId) {
+		return repository.findAllByOwnerId(pageable, userId);
+	}
+
 	@Override
 	public boolean isEmpty() {
 		return repository.count() <= 0;
+	}
+
+	@Override
+	public void delete(Long id) {
+
+		FinancialControl entity = this.findById(id)
+				.orElseThrow(() -> ResourceNotFoundException.builder()
+						.resourceId(id)
+						.clazz(FinancialControl.class).build());
+
+		this.repository.delete(entity);
 	}
 
 	@Override
@@ -56,16 +72,11 @@ public class FinancialControlServiceImpl implements FinancialControlService {
 			return null;
 		}
 
-		FinancialControl entity = findById(vo.getId()).orElse(null);
-
-		if (entity != null) {
-			entity = entity.toBuilder()
+		return findById(vo.getId())
+				.orElse(FinancialControl.builder()
 					.name(vo.getName())
 					.description(vo.getDescription())
-					.build();
-		}
-
-		return entity;
+					.build());
 	}
 
 	@Override

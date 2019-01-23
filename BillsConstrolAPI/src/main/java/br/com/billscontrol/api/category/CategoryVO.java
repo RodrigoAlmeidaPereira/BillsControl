@@ -17,7 +17,6 @@ public class CategoryVO {
 
     private Long id;
 
-
     @NotNull(message = "Name must be specified")
     @Size(min = 1, max = 90, message = "Name must have 1 to 90 characters")
     private String name;
