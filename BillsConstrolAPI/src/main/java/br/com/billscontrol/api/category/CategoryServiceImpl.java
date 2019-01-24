@@ -35,6 +35,7 @@ public class CategoryServiceImpl implements CategoryService {
 	
 	@Override
 	public Optional<Category> findById(Long id) {
+
 		if (id == null) {
 			return Optional.empty();
 		}

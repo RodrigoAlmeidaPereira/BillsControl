@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90ed0450-e66a-4e00-8524-6e9c5a4c6a0f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/billscontrol/exception/FieldMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/billscontrol/exception/ValidationError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comands.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/PaymentTypeVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/billscontrol/exception/ResourceExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/billscontrol/exception/ResourceExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/billscontrol/api/category/CategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/billscontrol/api/category/CategoryServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/PaymentTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/PaymentTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/PaymentTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/PaymentTypeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/rest/PaymentTypeResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/rest/PaymentTypeResource.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -60,54 +62,85 @@
     <favorites_list name="BillsConstrolAPI" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/exception/ResourceExceptionHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="287">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/BillsConstrolApiApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/exception/FieldMessage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/exception/StandardError.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="16" column="28" selection-start-line="13" selection-start-column="4" selection-end-line="16" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/exception/ValidationError.java">
+        <entry file="file://$PROJECT_DIR$/comands.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.classpath">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gradlew.bat">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BillsConstrolAPI.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymentsource/PaymentOperation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymentsource/PaymentOperationConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/CategoryService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControlService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.1.3.RELEASE/2fead3014c5e4e0cb750dd2939770d09fb2a21e4/spring-data-commons-2.1.3.RELEASE-sources.jar!/org/springframework/data/domain/Page.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControlRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -126,20 +159,28 @@
     <findStrings>
       <find>Account</find>
       <find>UserType</find>
-      <find>Category</find>
-      <find>Bank</find>
       <find>PaymentSource</find>
+      <find>category</find>
+      <find>Category</find>
       <find>bank</find>
+      <find>Payme</find>
+      <find>Bank</find>
+      <find>reposito</find>
     </findStrings>
     <replaceStrings>
       <replace>User</replace>
       <replace>FinancialControl</replace>
       <replace>PaymentOperation</replace>
-      <replace>Bank</replace>
       <replace>PaymentSource</replace>
       <replace>transaction</replace>
       <replace>Transaction</replace>
       <replace>account</replace>
+      <replace>financialControl</replace>
+      <replace>Bank</replace>
+      <replace>paymenttype</replace>
+      <replace>paymentYype</replace>
+      <replace>paymentType</replace>
+      <replace>PaymentType</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -148,24 +189,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/bank/rest/CategoryResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/CategoryRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/bank/BankRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/bank/BankService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/bank/BankServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymentsource/rest/BankResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymentsource/PaymentSourceRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymentsource/PaymentSourceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymentsource/PaymentSourceServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymentsource/rest/PaymentSourceResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/PaymentTypeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/PaymentTypeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/PaymentTypeRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/transaction/TransactionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/transaction/rest/PaymentTypeResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/transaction/rest/TransactionResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/rest/PaymentTypeResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/bank/rest/BankResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/account/AccountService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/account/AccountServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/account/AccountRepository.java" />
@@ -175,15 +203,9 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/config/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/exception/ResourceInUseException.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/exception/StandardError.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControlService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/CategoryService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/Category.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/CategoryServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/CategoryVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/rest/CategoryResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControlVO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControlServiceImpl.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/java/br/com/billscontrol/template/FixtureTemplate.java" />
         <option value="$PROJECT_DIR$/src/test/java/br/com/billscontrol/template/FixtureTemplateEnum.java" />
@@ -197,12 +219,31 @@
         <option value="$PROJECT_DIR$/src/test/java/br/com/billscontrol/api/category/CategoryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/br/com/billscontrol/api/category/CategoryServiceImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/exception/FieldMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/exception/ValidationError.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/exception/ResourceExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/exception/ValidationError.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/rest/CategoryResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControlRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/user/UserVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/rest/FinancialControlResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControlServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControlVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/bank/BankService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/CategoryVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/bank/BankVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/bank/BankServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/bank/rest/BankResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/rest/PaymentTypeResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/PaymentTypeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/PaymentTypeVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/PaymentTypeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/CategoryServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControlService.java" />
+        <option value="$PROJECT_DIR$/comands.txt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="x" value="154" />
     <option name="y" value="-831" />
     <option name="width" value="1039" />
@@ -211,6 +252,9 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <flattenPackages ProjectPane="false" />
+      <autoscrollToSource ProjectPane="true" />
+      <autoscrollFromSource ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -219,53 +263,123 @@
           <expand>
             <path>
               <item name="BillsConstrolAPI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BillsConstrolAPI" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="BillsConstrolAPI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BillsConstrolAPI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BillsConstrolAPI" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="BillsConstrolAPI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BillsConstrolAPI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BillsConstrolAPI" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="BillsConstrolAPI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BillsConstrolAPI" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="BillsConstrolAPI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BillsConstrolAPI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BillsConstrolAPI" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="BillsConstrolAPI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="billscontrol" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BillsConstrolAPI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BillsConstrolAPI" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="BillsConstrolAPI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="billscontrol" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
             </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Tests'; set:Tests; class com.intellij.psi.search.scope.TestsScope">
-          <expand>
             <path>
-              <item name="BillsConstrolAPI" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="br" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="BillsConstrolAPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BillsConstrolAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="billscontrol" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BillsConstrolAPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BillsConstrolAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="billscontrol" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="bank" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BillsConstrolAPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BillsConstrolAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="billscontrol" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="bank" type="462c0819:PsiDirectoryNode" />
+              <item name="rest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BillsConstrolAPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BillsConstrolAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="billscontrol" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="category" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BillsConstrolAPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BillsConstrolAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="billscontrol" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="financialcontrol" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BillsConstrolAPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BillsConstrolAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="billscontrol" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="paymentsource" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BillsConstrolAPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="BillsConstrolAPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.springframework.data:spring-data-commons:2.1.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="BillsConstrolAPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.springframework.data:spring-data-commons:2.1.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-data-commons-2.1.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BillsConstrolAPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.springframework.data:spring-data-commons:2.1.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-data-commons-2.1.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BillsConstrolAPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.springframework.data:spring-data-commons:2.1.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-data-commons-2.1.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -315,10 +429,21 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Tests'; set:Tests; class com.intellij.psi.search.scope.TestsScope">
+          <expand>
+            <path>
+              <item name="BillsConstrolAPI" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="br" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548112739467" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548295974480" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -332,24 +457,25 @@
       <recent name="br.com.billscontrol.api.user" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.com.billscontrol.api.bank" />
       <recent name="br.com.billscontrol.api.user" />
       <recent name="br.com.billscontrol" />
       <recent name="br.com.billscontrol.api.paymentsource" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.billscontrol.api.paymenttype" />
+      <recent name="br.com.billscontrol.api.financialcontrol.rest" />
+      <recent name="br.com.billscontrol.exception" />
+      <recent name="br.com.billscontrol.api.transaction.rest" />
+      <recent name="br.com.billscontrol.api.paymenttype.rest" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymentsource" />
       <recent name="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/bank" />
       <recent name="$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/account/financialcontrol" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="br.com.billscontrol.exception" />
-      <recent name="br.com.billscontrol.api.transaction.rest" />
-      <recent name="br.com.billscontrol.api.paymenttype.rest" />
-      <recent name="br.com.billscontrol.api.paymentsource.rest" />
-      <recent name="br.com.billscontrol.api.bank.rest" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -394,8 +520,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in br.com.billscontrol.api.BillsConstrolAPI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="br.com.billscontrol.api.BillsConstrolAPI" />
+    <configuration name="All in br.com.billscontrol.api.BillsConstrolAPI.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="br.com.billscontrol.api.BillsConstrolAPI.test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
@@ -413,10 +539,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BillsConstrolApiApplication" />
+        <item itemvalue="JUnit.All in br.com.billscontrol.api.BillsConstrolAPI.test (1)" />
+        <item itemvalue="JUnit.All in BillsConstrolAPI (3)" />
         <item itemvalue="JUnit.All in br.com.billscontrol.api.BillsConstrolAPI.test" />
         <item itemvalue="JUnit.All in br.com.billscontrol.api.BillsConstrolAPI (1)" />
-        <item itemvalue="JUnit.All in br.com.billscontrol.api.BillsConstrolAPI" />
-        <item itemvalue="JUnit.All in BillsConstrolAPI (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -431,15 +557,17 @@
       <option name="presentableId" value="Default" />
       <updated>1547080811093</updated>
     </task>
+    <task id="LOCAL-00001" summary="Ajustmens in bank and financial control rests">
+      <created>1548284765402</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1548284765403</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CategoryServiceImplTest - 2019.01.21 at 20h 24m 06s.xml">
-      <configuration name="CategoryServiceImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CategoryServiceImplTest - 2019.01.21 at 20h 25m 31s.xml">
-      <configuration name="CategoryServiceImplTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CategoryServiceImplTest - 2019.01.21 at 20h 28m 22s.xml">
       <configuration name="CategoryServiceImplTest" configurationId="JUnit" />
     </history-entry>
@@ -464,23 +592,29 @@
     <history-entry file="All_in_br_com_billscontrol_api_BillsConstrolAPI_test - 2019.01.21 at 21h 00m 02s.xml">
       <configuration name="All in br.com.billscontrol.api.BillsConstrolAPI.test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_br_com_billscontrol_api_BillsConstrolAPI_test_(1) - 2019.01.23 at 19h 58m 29s.xml">
+      <configuration name="All in br.com.billscontrol.api.BillsConstrolAPI.test (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_br_com_billscontrol_api_BillsConstrolAPI_test_(1) - 2019.01.23 at 19h 59m 01s.xml">
+      <configuration name="All in br.com.billscontrol.api.BillsConstrolAPI.test (1)" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-246" y="-1080" width="1920" height="1080" extended-state="0" />
+    <frame x="154" y="-831" width="1039" height="563" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.57831323" visible="true" weight="0.16347177" />
-      <window_info id="Structure" order="1" sideWeight="0.42048192" side_tool="true" weight="0.21530758" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5774947" visible="true" weight="0.3781344" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.42250532" side_tool="true" visible="true" weight="0.3781344" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Learn" order="6" weight="0.32995737" />
-      <window_info id="Favorites" order="7" sideWeight="0.42168674" side_tool="true" weight="0.21530758" />
+      <window_info id="Favorites" order="7" sideWeight="0.42178217" side_tool="true" weight="0.106496274" />
       <window_info id="Build Variants" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.37227723" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37227723" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -491,296 +625,27 @@
       <window_info anchor="bottom" id="Build" order="10" weight="0.23185265" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32871288" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32871288" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32960597" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24973376" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Gradle" order="5" weight="0.32995737" />
+      <window_info anchor="right" id="Gradle" order="5" weight="0.13099042" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32960597" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.57831323" visible="true" weight="0.21530758" />
-      <window_info id="Structure" order="1" sideWeight="0.42048192" side_tool="true" weight="0.21530758" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Learn" order="6" weight="0.32995737" />
-      <window_info id="Favorites" order="7" sideWeight="0.42168674" side_tool="true" weight="0.21530758" />
-      <window_info id="Build Variants" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36930692" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32871288" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="10" weight="0.23185265" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32871288" />
-      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32871288" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Gradle" order="5" weight="0.32995737" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-    </layout-to-restore>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ajustmens in bank and financial control rests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustmens in bank and financial control rests" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/transaction/TransactionStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.1.3.RELEASE/7f3018f1227075cf6e5772659e042f7cdbe59cb6/spring-web-5.1.3.RELEASE-sources.jar!/org/springframework/web/bind/annotation/PathVariable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.1.3.RELEASE/7f3018f1227075cf6e5772659e042f7cdbe59cb6/spring-web-5.1.3.RELEASE-sources.jar!/org/springframework/web/bind/annotation/GetMapping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="56" column="7" lean-forward="true" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/transaction/rest/TransactionResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="65" column="52" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/rest/PaymentTypeResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="39" column="97" selection-start-line="39" selection-start-column="97" selection-end-line="39" selection-end-column="97" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/bank/rest/BankResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="69" column="5" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="69" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/account/rest/AccountResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/account/AccountService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="68" selection-start-line="13" selection-start-column="68" selection-end-line="13" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/account/AccountServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="51" column="82" selection-start-line="51" selection-start-column="82" selection-end-line="51" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/account/AccountRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/transaction/TransactionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/transaction/TransactionRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="89" selection-start-line="10" selection-start-column="89" selection-end-line="10" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/transaction/TransactionServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="48" column="84" selection-start-line="48" selection-start-column="84" selection-end-line="48" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/config/SwaggerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/ref/Reference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="233" column="24" selection-start-line="233" selection-start-column="24" selection-end-line="233" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/5.1.3.RELEASE/4f8f174ec7368e929a20f42a759f854f3a060732/spring-webmvc-5.1.3.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="115" selection-start-line="115" selection-end-line="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.1.3.RELEASE/7f3018f1227075cf6e5772659e042f7cdbe59cb6/spring-web-5.1.3.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/2.0.1.Final/4b714a5167580122e46ead3317ffcdcdbd67c5f0/validation-api-2.0.1.Final-sources.jar!/javax/validation/constraints/NotNull.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/2.0.1.Final/4b714a5167580122e46ead3317ffcdcdbd67c5f0/validation-api-2.0.1.Final-sources.jar!/javax/validation/constraints/Max.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/2.0.1.Final/4b714a5167580122e46ead3317ffcdcdbd67c5f0/validation-api-2.0.1.Final-sources.jar!/javax/validation/constraints/Size.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/CategoryRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="11" selection-start-line="10" selection-start-column="4" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/exception/ResourceInUseException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControlService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="27" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControlVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/CategoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControlRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControlServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="40" column="61" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/user/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/br/com/billscontrol/api/UserServiceImplTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/br/com/billscontrol/template/FixtureTemplateEnum.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -803,16 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/CategoryServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -871,34 +726,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/CategoryVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/rest/CategoryResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymentsource/PaymentSourceServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymentsource/PaymentOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -919,10 +750,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/BillsConstrolApiApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/exception/ValidationError.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -931,15 +769,286 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/exception/ResourceExceptionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="210">
+          <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/BillsConstrolApiApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/user/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/user/UserVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/account/rest/AccountResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/account/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymentsource/rest/PaymentSourceResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControlVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControlServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="62" column="64" lean-forward="true" selection-start-line="59" selection-start-column="8" selection-end-line="62" selection-end-column="64" />
+          <folding>
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/bank/BankRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/bank/BankService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/bank/Bank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/CategoryVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/bank/rest/BankResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="126" column="4" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="126" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/PaymentTypeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/rest/PaymentTypeResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="958">
+          <caret line="119" column="5" lean-forward="true" selection-start-line="119" selection-start-column="5" selection-end-line="119" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/rest/FinancialControlResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="71" column="45" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/rest/CategoryResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="958">
+          <caret line="101" column="4" lean-forward="true" selection-start-line="101" selection-start-column="4" selection-end-line="101" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/PaymentTypeVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymenttype/PaymentTypeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#689#690#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/bank/BankServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+          <folding>
+            <element signature="e#1044#1045#0" expanded="true" />
+            <element signature="e#1086#1087#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/CategoryRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" selection-start-line="10" selection-start-column="4" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/bank/BankVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="27" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/CategoryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymentsource/PaymentOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/paymentsource/PaymentOperationConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BillsConstrolAPI.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControlRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew.bat">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testeste">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/category/CategoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.1.3.RELEASE/2fead3014c5e4e0cb750dd2939770d09fb2a21e4/spring-data-commons-2.1.3.RELEASE-sources.jar!/org/springframework/data/domain/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/billscontrol/api/financialcontrol/FinancialControlService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comands.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
         </state>
       </provider>
     </entry>

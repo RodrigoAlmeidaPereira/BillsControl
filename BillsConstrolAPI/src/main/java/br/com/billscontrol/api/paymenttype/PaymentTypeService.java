@@ -12,6 +12,9 @@ public interface PaymentTypeService {
 	PaymentType update(PaymentType paymentType);
 	Page<PaymentType> findAll(Pageable pageable);
 	Page<PaymentType> findAll(Pageable pageable, Long financialControlId);
+	void delete(Long id);
 	boolean isEmpty();
-			
+
+	PaymentType toEntity(PaymentTypeVO vo);
+	PaymentTypeVO toVO(PaymentType entity);
 }
