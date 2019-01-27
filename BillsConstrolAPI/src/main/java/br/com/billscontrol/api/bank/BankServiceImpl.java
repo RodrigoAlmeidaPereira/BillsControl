@@ -57,7 +57,8 @@ public class BankServiceImpl implements BankService {
 
 	@Override
 	public void delete(Long id) {
-		Bank entity = findById(id).orElseThrow(() -> ResourceNotFoundException.builder()
+		Bank entity = findById(id)
+				.orElseThrow(() -> ResourceNotFoundException.builder()
 				.resourceId(id)
 				.clazz(Bank.class).build());
 
