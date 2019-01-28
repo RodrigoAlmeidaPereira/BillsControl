@@ -43,6 +43,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Optional<User> findById(Long id) {
+
+        if (id == null) {
+            return Optional.empty();
+        }
+
         return repository.findById(id);
     }
 
@@ -63,6 +68,52 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean isEmpty() {
         return this.repository.count() <= 0;
+    }
+
+    @Override
+    public Optional<User> findByEmail(String email) {
+        return repository.findByEmail(email);
+    }
+
+    @Override
+    public void delete(Long id) {
+
+        User entity = findById(id)
+                .orElseThrow(() -> ResourceNotFoundException.builder()
+                        .resourceId(id)
+                        .clazz(User.class).build());
+
+        repository.delete(entity);
+    }
+
+    @Override
+    public User toEntity(UserVO vo) {
+
+        if (vo == null) {
+            return null;
+        }
+
+        return findById(vo.getId())
+                .orElse(User.builder()
+                        .name(vo.getName())
+                        .email(vo.getEmail())
+                        .userType(vo.getUserType())
+                        .build());
+    }
+
+    @Override
+    public UserVO toVO(User entity) {
+
+        if (entity == null) {
+            return null;
+        }
+
+        return UserVO.builder()
+                .id(entity.getId())
+                .name(entity.getName())
+                .email(entity.getEmail())
+                .userType(entity.getUserType())
+                .build();
     }
 
     @Override

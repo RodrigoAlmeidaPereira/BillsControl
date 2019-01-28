@@ -1,6 +1,7 @@
 package br.com.billscontrol.api.user;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +12,8 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder(toBuilder = true)
+@UserInsert
 public class UserVO {
 
     private Long id;
@@ -23,6 +26,6 @@ public class UserVO {
     @Email(message = "Invalid e-mail")
     private String email;
 
-    @NotNull
+    @NotNull(message = "User type must be specified")
     private UserType userType;
 }

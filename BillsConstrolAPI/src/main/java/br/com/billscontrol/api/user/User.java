@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import java.time.Instant;
 import java.util.Collection;
@@ -27,6 +28,8 @@ public class User {
     private String name;
 
     @NotNull
+    @Email
+    @Column(unique = true)
     private String email;
 
     @NotNull
