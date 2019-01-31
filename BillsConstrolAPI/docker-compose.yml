@@ -1,0 +1,22 @@
+version: '2'
+services:
+    bills-database:
+        image: mysql:latest
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: bills-db
+            MYSQL_USER: billscontrol
+            MYSQL_PASSWORD: billscontrol
+        ports:
+            - 3306:3306
+        networks:
+            - bills-network
+        volumes:
+            - bills-volume:/var/lib/mysql
+networks:
+    bills-network:
+        driver: bridge
+volumes:
+    bills-volume:
+            driver: local
